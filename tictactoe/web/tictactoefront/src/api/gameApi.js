@@ -1,7 +1,10 @@
 import apiClient from './apiClient';
 
-const startGame = async (player) => {
-  const response = await apiClient.post('/game/start', player);
+const startGame = async () => {
+    const body = {
+            "login": "java-master"
+    };
+  const response = await apiClient.post('/game/start', body);
   return response.data;
 };
 
