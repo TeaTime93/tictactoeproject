@@ -1,5 +1,6 @@
 import './App.css';
 import { Board } from './components/board';
+import Header from './components/header';
 import React, {useState} from "react";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   
   return (
     <div classNAme="App">
+      <Header />
       <Board board={board} onClick={handleBoxClick}/>
     </div>
   );
