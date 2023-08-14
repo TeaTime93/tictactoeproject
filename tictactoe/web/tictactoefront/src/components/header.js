@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import gameApi from '../api/gameApi';
 import { startGame, connect } from '../api/gameApi';
 
 const Header = () => {
@@ -12,9 +13,9 @@ const Header = () => {
         console.error("Failed to start a new game:", error.response?.data || error.message);
       }
     };
-    startNewGame({ name: "JohnDoe" });
+    const data = startNewGame({ name: "JohnDoe" });
     
-    console.log('Start game clicked!');
+    console.log('Start game clicked!', data);
   };
 
   return (
